@@ -11,7 +11,7 @@
 
 # User dependent .profile file
 # Check that we haven't already been sourced.
-[[ -z ${HOME_PROFILE_true} ]] && HOME_PROFILE_true="1" || return
+[[ -z ${HOME_PROFILE_true} ]] && export HOME_PROFILE_true="1" || return
 
 # Set user-defined locale
 export LANG=$(locale -uU)

@@ -5,5 +5,5 @@
 # ~/.inputrc     # individual readline initialization file runs after .zshrc
 
 # Check that we haven't already been sourced.
-[[ -z ${HOME_ZPROFILE_true} ]] && HOME_ZPROFILE_true="1" || return
+[[ -z ${HOME_ZPROFILE_true} ]] && export HOME_ZPROFILE_true="1" || return
 

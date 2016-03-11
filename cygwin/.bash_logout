@@ -9,4 +9,4 @@
 # always be found at /etc/defaults/etc/bash.bashrc
 
 # Check that we haven't already been sourced.
-[[ -z ${HOME_BASH_LOGOUT_true} ]] && HOME_BASH_LOGOUT_true="1" || return
+[[ -z ${HOME_BASH_LOGOUT_true} ]] && export HOME_BASH_LOGOUT_true="1" || return

@@ -5,5 +5,4 @@
 # ~/.inputrc     # individual readline initialization file runs after .zshrc
 
 # Check that we haven't already been sourced.
-[[ -z ${HOME_ZSHRC_true} ]] && HOME_ZSHRC_true="1" || return
-
+[[ -z ${HOME_ZSHRC_true} ]] && export HOME_ZSHRC_true="1" || return

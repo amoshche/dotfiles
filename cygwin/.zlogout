@@ -5,5 +5,5 @@
 # ~/.inputrc     # individual readline initialization file runs after .zshrc
 
 # Check that we haven't already been sourced.
-[[ -z ${HOME_ZLOGOUT_true} ]] && HOME_ZLOGOUT_true="1" || return
+[[ -z ${HOME_ZLOGOUT_true} ]] && export HOME_ZLOGOUT_true="1" || return
 
