@@ -3,6 +3,9 @@
 # The latest version as installed by the Cygwin Setup program can
 # always be found at /etc/defaults/etc/skel/.inputrc
 
+# Check that we haven't already been sourced.
+[[ -z ${HOME_INCLUDE_INPUTRC} ]] && { export HOME_INCLUDE_ORDER="$(/bin/expr ${HOME_INCLUDE_ORDER} + 1)"; export HOME_INCLUDE_INPUTRC="${HOME_INCLUDE_ORDER}"; } || return
+
 # the following line is actually
 # equivalent to "\C-?": delete-char
 "\e[3~": delete-char

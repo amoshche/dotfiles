@@ -5,5 +5,4 @@
 # ~/.inputrc     # individual readline initialization file runs after .zshrc
 
 # Check that we haven't already been sourced.
-[[ -z ${HOME_ZLOGOUT_true} ]] && export HOME_ZLOGOUT_true="1" || return
-
+[[ -z ${HOME_INCLUDE_ZSHRC} ]] && { export HOME_INCLUDE_ORDER="$(/bin/expr ${HOME_INCLUDE_ORDER} + 1)"; export HOME_INCLUDE_ZSHRC="${HOME_INCLUDE_ORDER}"; } || return

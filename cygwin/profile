@@ -10,8 +10,9 @@
 # always be found at /etc/defaults/etc/skel/.profile
 
 # User dependent .profile file
+
 # Check that we haven't already been sourced.
-[[ -z ${HOME_PROFILE_true} ]] && export HOME_PROFILE_true="1" || return
+[[ -z ${HOME_INCLUDE_PROFILE} ]] && { export HOME_INCLUDE_ORDER="$(/bin/expr ${HOME_INCLUDE_ORDER} + 1)"; export HOME_INCLUDE_PROFILE="${HOME_INCLUDE_ORDER}"; } || return
 
 # Set user-defined locale
 export LANG=$(locale -uU)

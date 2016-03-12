@@ -3,10 +3,5 @@
 # ~/.bash_logout		   #The individual login shell cleanup file, executed when a login shell exits
 # ~/.inputrc                       #Individual readline initialization file
 
-# /etc/bash.bashrc: executed by bash(1) for interactive shells.
-
 # The latest version as installed by the Cygwin Setup program can
-# always be found at /etc/defaults/etc/bash.bashrc
-
-# Check that we haven't already been sourced.
-[[ -z ${HOME_BASH_LOGOUT_true} ]] && export HOME_BASH_LOGOUT_true="1" || return
+# always be found at /etc/defaults/etc/bash.bash_logout

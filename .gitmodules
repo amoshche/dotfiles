@@ -1,3 +1,9 @@
 [submodule "mintty-colors-solarized"]
 	path = mintty-colors-solarized
 	url = git@github.com:amoshche/mintty-colors-solarized.git
+[submodule "tmux-colors-solarized"]
+	path = tmux-colors-solarized
+	url = git@github.com:amoshche/tmux-colors-solarized.git
+[submodule "dircolors-solarized"]
+	path = dircolors-solarized
+	url = git@github.com:amoshche/dircolors-solarized.git

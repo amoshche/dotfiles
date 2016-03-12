@@ -1,2 +1,0 @@
-# Check that we haven't already been sourced.
-[[ -z ${HOME_ENVIRONMENT_true} ]] && export HOME_ENVIRONMENT_true="1" || return
