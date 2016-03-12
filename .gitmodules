@@ -2,9 +2,9 @@
 	path = mintty-colors-solarized
 	url = git@github.com:amoshche/mintty-colors-solarized.git
         branch = font-xterm
-[submodule "tmux-colors-solarized"]
-	path = tmux-colors-solarized
-	url = git@github.com:amoshche/tmux-colors-solarized.git
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
 	url = git@github.com:amoshche/dircolors-solarized.git
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git

@@ -4,7 +4,7 @@
 # always be found at /etc/defaults/etc/skel/.inputrc
 
 # Check that we haven't already been sourced.
-[[ -z ${HOME_INCLUDE_INPUTRC} ]] && { export HOME_INCLUDE_ORDER="$(/bin/expr ${HOME_INCLUDE_ORDER} + 1)"; export HOME_INCLUDE_INPUTRC="${HOME_INCLUDE_ORDER}"; } || return
+# [[ -z ${HOME_INCLUDE_INPUTRC} ]] && { export HOME_INCLUDE_ORDER="$(/bin/expr ${HOME_INCLUDE_ORDER} + 1)"; export HOME_INCLUDE_INPUTRC="${HOME_INCLUDE_ORDER}"; } || return
 
 # the following line is actually
 # equivalent to "\C-?": delete-char
@@ -27,33 +27,38 @@
 "\eOF": end-of-line
 
 # Allow 8-bit input/output
-#set meta-flag on
-#set convert-meta off
-#set input-meta on
-#set output-meta on
-#$if Bash
+set meta-flag on
+set convert-meta off
+set input-meta on
+set output-meta on
+
+# $if mode=(emacs|vi)
+# $if term=(sun-cmd|sun which matches sun and sun-smd)
+# $if application (the program sets)
+#$endif, $else, $include
+$if Bash
   # Don't ring bell on completion
-  #set bell-style none
+  set bell-style none
 
   # or, don't beep at me - show me
-  #set bell-style visible
+  set bell-style visible
 
   # Filename completion/expansion
-  #set completion-ignore-case on
-  #set show-all-if-ambiguous on
+  set completion-ignore-case on
+  set show-all-if-ambiguous on
 
   # Expand homedir name
-  #set expand-tilde on
+  set expand-tilde on
 
   # Append "/" to all dirnames
-  #set mark-directories on
-  #set mark-symlinked-directories on
+  set mark-directories on
+  set mark-symlinked-directories on
 
   # Match all files
-  #set match-hidden-files on
+  set match-hidden-files on
 
   # 'Magic Space'
   # Insert a space character then performs
   # a history expansion in the line
   #Space: magic-space
-#$endif
+$endif

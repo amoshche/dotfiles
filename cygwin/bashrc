@@ -36,3 +36,36 @@ else
 fi
 
 alias ls='ls --color=auto'
+
+# Uncomment to turn on programmable completion enhancements.
+# Any completions you add in ~/.bash_completion are sourced last.
+[[ -f /etc/bash_completion ]] && . /etc/bash_completion
+
+# Less Colors for Man Pages
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+
+# Make bash append rather than overwrite the history on disk
+shopt -s histappend
+shopt -s checkwinsize
+
+# When changing directory small typos can be ignored by bash
+# for example, cd /vr/lgo/apaache would find /var/log/apache
+shopt -s cdspell
+
+# History Options
+# Don't put duplicate lines in the history.
+export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
+
+# Ignore some controlling instructions
+# HISTIGNORE is a colon-delimited list of patterns which should be excluded.
+# The '&' is a special pattern which suppresses duplicate entries.
+export HISTIGNORE=$'[ \t]*:&:[fb]g:exit'
+export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
+
+PS1='\[\e[1;36m\][\[\e[0;36m\]\u\[\e[1;36m\]@\[\e[0;36m\]\h\[\e[1;36m\]] [\[\e[1;31m\]\w\[\e[1;36m\]]\$\[\e[0m\] '
