@@ -11,16 +11,13 @@
 
 # User dependent .profile file
 
-# Check that we haven't already been sourced.
-[[ -z ${HOME_INCLUDE_PROFILE} ]] && { export HOME_INCLUDE_ORDER="$(/bin/expr ${HOME_INCLUDE_ORDER} + 1)"; export HOME_INCLUDE_PROFILE="${HOME_INCLUDE_ORDER}"; } || return
-
 # Set user-defined locale
-export LANG=$(locale -uU)
+# export LANG=$(locale -uU)
 
 # This file is not read by bash(1) if ~/.bash_profile or ~/.bash_login
 # exists.
 #
 # if running bash
 if [ -n "${BASH_VERSION}" ]; then
-  [ -f "${HOME}/.bashrc" ] && source "${HOME}/.bashrc"
+  [ -e "${HOME}/.bashrc" ] && source "${HOME}/.bashrc"
 fi

@@ -10,10 +10,7 @@
 # always be found at /etc/defaults/etc/bash.bashrc
 
 # If not running interactively, don't do anything
-[[ "$-" != *i* ]] && return
-
-# Check that we haven't already been sourced.
-[[ -z ${HOME_INCLUDE_BASHRC} ]] && { export HOME_INCLUDE_ORDER="$(/bin/expr ${HOME_INCLUDE_ORDER} + 1)"; export HOME_INCLUDE_BASHRC="${HOME_INCLUDE_ORDER}"; } || return
+#[[ "$-" != *i* ]] && return
 
 # Uncomment to use the terminal colours set in DIR_COLORS
 # if we customize then use our own .dir_colors
@@ -50,6 +47,8 @@ export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
+alias env='env | grep -v LESS_TERMCAP'
+
 # Make bash append rather than overwrite the history on disk
 shopt -s histappend
 shopt -s checkwinsize
@@ -68,4 +67,4 @@ export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTIGNORE=$'[ \t]*:&:[fb]g:exit'
 export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
 
-PS1='\[\e[1;36m\][\[\e[0;36m\]\u\[\e[1;36m\]@\[\e[0;36m\]\h\[\e[1;36m\]] [\[\e[1;31m\]\w\[\e[1;36m\]]\$\[\e[0m\] '
+export PS1='\[\e[1;36m\][\[\e[0;36m\]\u\[\e[1;36m\]@\[\e[0;36m\]\h\[\e[1;36m\]] [\[\e[1;31m\]\w\[\e[1;36m\]]\$\[\e[0m\] '
