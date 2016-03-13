@@ -67,4 +67,4 @@ export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 export HISTIGNORE=$'[ \t]*:&:[fb]g:exit'
 export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
 
-export PS1='\[\e[1;36m\][\[\e[0;36m\]\u\[\e[1;36m\]@\[\e[0;36m\]\h\[\e[1;36m\]] [\[\e[1;31m\]\w\[\e[1;36m\]]\$\[\e[0m\] '
+export PS1='\[\033]0;\u@\h:\w\007\]\[\e[1;36m\][\[\e[0;36m\]\u\[\e[1;36m\]@\[\e[0;36m\]\h\[\e[1;36m\]] [\[\e[1;31m\]\w\[\e[1;36m\]]\$\[\e[0m\] '
