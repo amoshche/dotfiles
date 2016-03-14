@@ -8,3 +8,7 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
+[submodule "fatty"]
+	path = fatty
+	url = git@github.com:amoshche/fatty.git
+        branch = font-adjustment
