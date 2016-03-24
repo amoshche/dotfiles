@@ -1,8 +1,10 @@
 [[ -f "${HOME}/.environment" ]] && source "${HOME}/.environment"
-# ~/.bash_profile or ~/.profile    #The personal initialization file, executed for login shells
-# ~/.bashrc                        #The individual per-interactive-shell startup file
-# ~/.bash_logout		   #The individual login shell cleanup file, executed when a login shell exits
-# ~/.inputrc                       #Individual readline initialization file
+# ~/.bash_profile or ~/.profile #The personal initialization file, 
+                                #executed for login shells
+# ~/.bashrc                     #The individual per-interactive-shell startup file
+# ~/.bash_logout                #The individual login shell cleanup file,
+                                #executed when a login shell exits
+# ~/.inputrc                    #Individual readline initialization file
 
 # /etc/bash.bashrc: executed by bash(1) for interactive shells.
 
@@ -16,20 +18,20 @@
 # if we customize then use our own .dir_colors
 # if we have a screen, we can try a colored screen
 if [[ "${TERM}" == "screen" ]]; then
-    export TERM="screen-256color"
+  export TERM="screen-256color"
 fi
 
 # activate ls colors, (private if possible)
 export DIRCOLORS="dotfiles/dircolors-solarized/dircolors.256dark"
 if [[ -a ${DIRCOLORS} ]]; then
-    if [[ "${TERM}" == *256* ]]; then
-        which dircolors > /dev/null && eval "`dircolors -b ${DIRCOLORS} 2>/dev/null`"
-    else
-        # standard colors for non-256-color terms
-        which dircolors > /dev/null && eval "`dircolors -b`"
-    fi
-else
+  if [[ "${TERM}" == *256* ]]; then
+    which dircolors > /dev/null && eval "`dircolors -b ${DIRCOLORS} 2>/dev/null`"
+  else
+    # standard colors for non-256-color terms
     which dircolors > /dev/null && eval "`dircolors -b`"
+  fi
+else
+  which dircolors > /dev/null && eval "`dircolors -b`"
 fi
 
 alias ls='ls --color=auto'
