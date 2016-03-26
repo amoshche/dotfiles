@@ -1,21 +1,13 @@
 
 " general {{{
-    " The ultimate snippet solution for python enabled Vim.
-    VAMActivate github:SirVer/ultisnips
     " Beautiful dual light/dark, selective contrast, GUI/256/16 colorscheme
     VAMActivate github:altercation/vim-colors-solarized
     " A tree explorer plugin for navigating the filesystem
     VAMActivate github:scrooloose/nerdtree
     " Visualize your undo tree
     VAMActivate github:sjl/gundo.vim
-    " VAMActivate yankstack     " lightweight implementation of emacs' kill ring for vim
-    VAMActivate github:maxbrunsfeld/vim-yankstack
     " Use the repeat command (.) with supported plugins
     VAMActivate github:tpope/vim-repeat
-    " Use CTRL-A/X to increment dates, times, and more
-    VAMActivate github:tpope/vim-speeddating
-    " Press `<ENTER>` in normal mode to select the closest text object
-    VAMActivate github:gcmt/wildfire.vim
     " Supertab allows you to use <Tab> for all your insert completion needs
     VAMActivate github:ervandew/supertab
     " Lean & mean status/tabline for vim that's light as air
@@ -24,25 +16,15 @@
     VAMActivate github:godlygeek/tabular
     " True Sublime Text style multiple selections
     VAMActivate github:terryma/vim-multiple-cursors
-    " sugar for the UNIX shell commands that need it the most
-    "VAMActivate tpope/vim-eunuch
-    VAMActivate eunuch
-    " VAMActivate MRU           " Plugin to manage Most Recently Used (MRU) files
 "}}}
 
 " searching {{{
     " a front for ag, A.K.A. the_silver_searcher.
     VAMActivate github:rking/ag.vim
-    " Fold away lines not matching the last search pattern
-    VAMActivate searchfold
     " visual mark, then press * or # to search
     VAMActivate github:bronson/vim-visual-star-search
     " Fuzzy file, buffer, MRU, and tag finder with regexp support
     VAMActivate github:kien/ctrlp.vim
-    " Takes a quickfix list and makes it editable
-    VAMActivate github:Wolfy87/vim-enmasse
-    " substitute preview
-    VAMActivate github:osyo-manga/vim-over
 "}}}
 
 " motions / operators {{{
@@ -84,12 +66,12 @@
 "}}}
 
 " mailing {{{
-    " Check for attachments when writing mails with mutt
-    VAMActivate github:chrisbra/CheckAttach
-    " Erase signatures at the end of your replies
-    VAMActivate Mail_Sig.set
-    " Easily insert references to URLs in emails
-    VAMActivate uri-ref
+" Check for attachments when writing mails with mutt
+" VAMActivate github:chrisbra/CheckAttach
+" Erase signatures at the end of your replies
+" VAMActivate Mail_Sig.set
+" Easily insert references to URLs in emails
+" VAMActivate uri-ref
 "}}}
 
 " syntaxes {{{

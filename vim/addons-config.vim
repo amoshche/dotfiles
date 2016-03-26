@@ -32,13 +32,6 @@ let g:ctrlp_custom_ignore = {
 nmap <leader>tu :GundoToggle<CR>
 "}}}
 
-"{{{ Yankstack specific bindings
-" https://github.com/maxbrunsfeld/vim-yankstack
-let g:yankstack_map_keys = 0
-nmap <leader>p <Plug>yankstack_substitute_older_paste
-nmap <leader>P <Plug>yankstack_substitute_newer_paste
-"}}}
-
 "{{{ dash
 " search for the keyword under the cursor via dash
 " nmap <silent> <leader>d <Plug>DashSearch
