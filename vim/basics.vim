@@ -3,16 +3,11 @@ filetype indent plugin on
 syntax on
 
 set undodir=$HOME/.vim/undos
-set undofile        " new feature of undo files
+set undofile " new feature of undo files
 
 set directory=$HOME/.vim/swap " no more swapfiles in the same directory
 set backupdir=$HOME/.vim/backups " no more backupfiles in the same directory
 set backupskip=/tmp/*,/private/tmp/* " http://vim.wikia.com/wiki/Editing_crontab
-
-" prevents some security exploits having to do with modelines in files
-" http://lists.alioth.debian.org/pipermail/pkg-vim-maintainers/2007-June/004020.html
-set modeline
-set modelines=4
 
 " http://vimcasts.org/episodes/tabs-and-spaces/
 " 4 spaces expanded and backspace deletes 4 spaces too
@@ -80,9 +75,8 @@ if has('mouse')
 endif
 
 set t_Co=256 " turn on 256 colors in terminal on dark background
-set background=dark
-"set background=light
+"set background=dark
+set background=light
 
 " standard folding is marker based unless changed by plugins
 set foldmethod=marker
-
